@@ -1,31 +1,61 @@
 <!doctype html>
 <html>
+
 <head>
-    <title>Sample Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap" rel="stylesheet">
+    <title>Web Application</title>
     <style>
-        body {
+        .container {
             font-family: Arial, sans-serif;
             margin: 40px;
             background-color: #f9f9f9;
-            background-image: url("07.png");
+            background-image: url("images/Ganesh-pic-1.jpg");
             background-size: cover;
-            background-repeat: no-repeat;   
+            background-repeat: no-repeat;
+            height: 100vh;
         }
+
         .paragraph {
             font-size: 16px;
             color: #e9e2e2;
             line-height: 1.5;
             margin-top: 20px;
         }
+
+        .navigation-bar {
+            background-color: #e3e3e3;
+            padding: 10px;
+            font-family: 'BBH Bartle', cursive;
+            font-size: 18px;
+        }
+
+        .bbh-bartle-regular {
+            font-family: "BBH Bartle", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        .footer {
+            background-color: #e3e3e3;
+            padding: 15px;
+            font-size: 14px;
+        }
+        
     </style>
 </head>
+
 <body>
     <div class="navigation-bar" align="center" style="margin-bottom: 30px;">
+        <img src="images/shiva-logo.jfif" alt="Logo" style="height: 40px; vertical-align: middle; margin-right: 15px;">
         <a href="index.html" style="margin-right: 20px; text-decoration: none; color: #333;">Home</a>
         <a href="about.html" style="margin-right: 20px; text-decoration: none; color: #333;">About</a>
         <a href="contact.html" style="text-decoration: none; color: #333;">Contact</a>
     </div>
-    <div class="container" align="center">
+    <div class="container bbh-bartle-regular" align="left">
         <div class="row">
             <div class="col-6">
                 <h2 style="color:rgb(5, 248, 14)">Sample Header</h2>
@@ -39,6 +69,5 @@
         <p style="color:#555;">&copy; 2024 Sample Company. All rights reserved.</p>
     </div>
 </body>
+
 </html>
-
-
