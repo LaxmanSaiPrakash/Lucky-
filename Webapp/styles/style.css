@@ -1,0 +1,187 @@
+/* Advanced CSS Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f9f9f9;
+    background-image: url("../images/Ganesh-pic-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+    animation: fadeIn 0.8s ease-in;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.col-6 {
+    flex: 1;
+    animation: slideUp 0.6s ease-out;
+}
+
+.col-6 h2, .col-6 h3 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.col-6 h2:hover, .col-6 h3:hover {
+    transform: translateY(-5px);
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+}
+
+.paragraph {
+    font-size: 16px;
+    color: #e9e2e2;
+    line-height: 1.6;
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+}
+
+.navigation-bar {
+    background: linear-gradient(135deg, #e3e3e3 0%, #d0d0d0 100%);
+    padding: 12px 20px;
+    font-family: 'BBH Bartle', cursive;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.navigation-bar img {
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+.navigation-bar img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.navigation-bar a {
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.navigation-bar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+    transition: width 0.3s ease;
+}
+
+.navigation-bar a:hover {
+    color: #ff6b6b;
+}
+
+.navigation-bar a:hover::after {
+    width: 100%;
+}
+
+.bbh-bartle-regular {
+    font-family: "BBH Bartle", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.footer {
+    background: linear-gradient(90deg, #e3e3e3 0%, #d0d0d0 100%);
+    padding: 20px;
+    font-size: 14px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    border-radius: 8px 8px 0 0;
+    animation: slideUp 0.6s ease-out 0.2s backwards;
+}
+
+.footer p {
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.footer p:hover {
+    color: #333;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .navigation-bar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navigation-bar img {
+        margin-right: 0;
+    }
+}
