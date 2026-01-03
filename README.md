@@ -1,1 +1,1 @@
-Consists of different projects.
+Consists of different Project Source Codes.
