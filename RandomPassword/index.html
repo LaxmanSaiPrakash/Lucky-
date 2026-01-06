@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .input-group, .output-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="number"], input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Password Generator</h1>
+        <div class="input-group">
+            <label for="length">Password Length:</label>
+            <input type="number" id="length" min="4" max="32" value="12">
+        </div>
+        <div class="input-group">
+            <label for="include-uppercase">
+                <input type="checkbox" id="include-uppercase" checked>
+                Include Uppercase Letters
+            </label>
+        </div>
+        <div class="input-group">
+            <label for="include-lowercase">
+                <input type="checkbox" id="include-lowercase" checked>
+                Include Lowercase Letters
+            </label>
+        </div>
+        <div class="input-group">
+            <label for="include-numbers">
+                <input type="checkbox" id="include-numbers" checked>
+                Include Numbers
+            </label>
+        </div>
+        <div class="input-group">
+            <label for="include-symbols">
+                <input type="checkbox" id="include-symbols" checked>
+                Include Symbols
+            </label>
+        </div>
+        <button id="generate-btn">Generate Password</button>
+        <div class="output-group">
+            <label for="password-output">Generated Password:</label>
+            <input type="text" id="password-output" readonly>
+        </div>
+    </div>
+</body>
+</html>
